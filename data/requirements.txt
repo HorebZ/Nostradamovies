@@ -9,3 +9,6 @@ pandas==1.5.3
 
 # Numpy
 numpy==1.24.2
+
+# Matplotlib
+matplotlib==3.7.1
