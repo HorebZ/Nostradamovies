@@ -51,6 +51,20 @@ $> python app.py
 </details>
 
 <details>
-  <summary>📜 Notebook</summary>
-  🚧
+  <summary>📜 Data</summary>
+```Bash
+$> cd data/
+
+# Create venv
+$> python3 -m venv venv
+
+# Source your venv (for exit venv use `deactivate`)
+$> source venv/bin/activate
+
+# Install requirements
+$> pip install -r requirements.txt
+
+# use nutebook
+$> python n.jynb
+```
 </details>
