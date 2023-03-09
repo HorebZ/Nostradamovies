@@ -1,0 +1,11 @@
+# Jupyter
+jupyter==1.0.0
+
+# Notebook
+notebook==6.5.3
+
+# Pandas
+pandas==1.5.3
+
+# Numpy
+numpy==1.24.2
