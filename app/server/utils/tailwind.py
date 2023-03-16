@@ -1,6 +1,5 @@
 import os
 import json
-import flask
 import shlex
 import atexit
 import werkzeug
@@ -32,7 +31,7 @@ class Watcher:
             self.run()
 
         else:
-            print("=== TailwindCSS Compiler not started ===")
+            print(" * TailwindCSS Compiler not started")
 
             pass
 
@@ -62,6 +61,6 @@ class Watcher:
 
     @classmethod
     def terminate_on_exit(cls):
-        print("  * Watcher of TailwindCSS is stopped!")
+        print(" * Watcher of TailwindCSS is stopped!")
 
         Watcher.proc.terminate()

@@ -4,5 +4,8 @@
   },
   "scripts": {
     "watch": "npx tailwindcss -i ./server/static/src/style.css -o ./server/static/dist/style.css --minify --watch"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
   }
 }
