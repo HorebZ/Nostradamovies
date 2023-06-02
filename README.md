@@ -52,6 +52,7 @@ $> python app.py
 
 <details>
   <summary>📜 Data</summary>
+
 ```Bash
 $> cd data/
 
@@ -64,4 +65,5 @@ $> source venv/bin/activate
 # Install requirements
 $> pip install -r requirements.txt
 ```
+
 </details>

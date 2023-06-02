@@ -17,9 +17,13 @@ svg = os.path.join('static', 'svg')
 
 # routes
 # sanity check route
-@app.route('/sanity', methods=['GET'])
+@app.route('/api/v1/sanity', methods=['GET'])
 def ping_pong():
     return jsonify('check!')
+
+@app.route("/api/v1/images")
+def get_images():
+    images_folder = '../../data/
 
 @app.route("/")
 @app.route("/index")
