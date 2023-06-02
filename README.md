@@ -1,10 +1,7 @@
 # 🥷🏽 Lethal Data - 🎬 Nostradamovies
 
 
-### Setup
-<details open>
-  <summary>🐍 General setup</summary>
-
+### 🐍 General setup
 ```Bash
 # Install python3.11
 $> pyenv install 3.11
@@ -12,15 +9,10 @@ $> pyenv install 3.11
 # Select version localy (.python_version will generated)
 $> pyenv local 3.11
 ```
-</details>
 
-<details open>
-  <summary>🖥️ App</summary>
-
-###
-🖌️ TailwindCss
+### 🖥️ VueJS client
 ```Bash
-$> cd app/
+$> cd client/
 
 # Install hydrogen (latest lts - node 18)
 $> nvm install lts/hydrogen
@@ -28,11 +20,11 @@ $> nvm install lts/hydrogen
 # Use hydrogen
 $> nmv use lts/hydrogen
 
-#> Install packeages (tailwindcss)
-$> npm i
+# Install packeages (pnpm recomended)
+$> pnpm i
 ```
 
-🌶️ Flask
+### 🌶️ Flask api
 ```Bash
 $> cd app/server/
 
@@ -48,11 +40,7 @@ $> pip install -r requirements.txt
 # Now you can run server as debug with tailwind watcher and hot reload
 $> python app.py
 ```
-</details>
-
-<details>
-  <summary>📜 Data</summary>
-
+### 📜 Data
 ```Bash
 $> cd data/
 
@@ -65,5 +53,3 @@ $> source venv/bin/activate
 # Install requirements
 $> pip install -r requirements.txt
 ```
-
-</details>
