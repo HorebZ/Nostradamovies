@@ -1,3 +1,2 @@
-# Flask
-Flask==2.2.3
-Flask-Cors==3.0.10
+-r requirements-api.txt
+-r requirements-data.txt
