@@ -1,5 +1,7 @@
 # Dataset
 dataset/
+static/
+static/*
 
 # Ide
 .idea/
