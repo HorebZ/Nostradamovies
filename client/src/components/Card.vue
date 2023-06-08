@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div v-for="(image, index) in images" :key="index" class="cover atvImg">
-      <div class="atvImg-layer" :data-img="image.backgroundImg"></div>
-      <div class="atvImg-layer" :data-img="image.logoImg"></div>
+      <div class="atvImg-layer h-full" :data-img="image.backgroundImg"></div>
+      <div class="atvImg-layer w-full" :data-img="image.logoImg"></div>
     </div>
   </div>
 </template>
@@ -203,10 +203,6 @@ export default {
 </script>
 
 <style scoped>
-body {
-  background: #99aeff;
-}
-
 .container {
   width: 704px;
   height: 460px;

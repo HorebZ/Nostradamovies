@@ -1,7 +1,7 @@
-<script lang="ts" >
+<script lang="ts">
 import axios from "axios";
+import Poster from "@/components/Poster.vue";
 
-import Card from "@/components/Card.vue";
 
 export default {
   data() {
@@ -10,7 +10,7 @@ export default {
     };
   },
   components: {
-    Card,
+    Poster
   },
   mounted() {
     this.getImages();
@@ -49,50 +49,11 @@ export default {
 
   <video src="src/assets/mp4/trigger.mp4" preload="auto" autoplay loop class="my-2"></video>
 
-  <Card/>
-
   <div class="px-72">
     <div class="grid gap-8 grid-cols-4">
       <div v-for="(image, index) in images" :key="index" class="w-full h-full flex flex-col justify-between">
-        <img :src="image.src" :alt="image.alt" class="sw-full h-auto"/>
-        <div class="dd mt-3 p-1 h-10 w-full flex-col uppercase">
-          <p class="text-white text-xs">{{ image.alt }}</p>
-        </div>
+        <Poster :src="image.src" :alt="image.alt"/>
       </div>
     </div>
   </div>
-
-
-<!--  <div class="px-72">-->
-<!--    <div class="grid gap-8 grid-cols-4">-->
-<!--      <div v-for="(image, index) in images" :key="index" class="w-full h-full flex flex-col justify-between">-->
-<!--        <img :src="image.src" :alt="image.alt" class="sw-full h-auto"/>-->
-<!--        <div class="dd mt-3 p-1 h-10 w-full flex-col uppercase">-->
-<!--          <p class="text-white text-xs">{{ image.alt }}</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
 </template>
-
-<style scoped >
-.dd {
-  @apply relative before:origin-[center_right] before:top-0 hover:before:origin-[center_left] hover:before:scale-x-100 after:origin-[center_left] after:bottom-0 hover:after:origin-[center_right] hover:after:scale-x-100;
-}
-.dd::before,
-.dd::after {
-  @apply content-[''] absolute h-px bg-white transition-transform duration-[0.5s] ease-[ease] scale-x-0 inset-x-0;
-}
-
-.bb {
-  @apply z-[100] relative overflow-hidden text-[inherit] text-[white] cursor-pointer px-[1em] py-[0.5em] border-[none] after:content-[''] after:z-[-1] after:bg-[hsla(0,0%,100%,0.2)] after:absolute after:w-[1.25em] after:-inset-y-2/4 hover:after:transition-transform hover:after:duration-[0.45s] hover:after:ease-[ease-in-out];
-  font-family: inherit;
-  outline: none;
-}
-.bb::after {
-  transform: translate3d(-525%, 0, 0) rotate(35deg);
-}
-.bb:hover::after {
-  transform: translate3d(200%, 0, 0) rotate(35deg);
-}
-</style>
