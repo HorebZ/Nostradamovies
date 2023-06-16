@@ -25,3 +25,5 @@ seaborn==0.12.2
 scikit-learn==1.2.2
 
 colorthief==0.2.1
+
+pytesseract==0.3.10
