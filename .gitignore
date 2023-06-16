@@ -1,5 +1,8 @@
 # Dataset
 dataset/
+datasave/
+
+# Static
 static/
 static/*
 
