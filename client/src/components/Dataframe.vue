@@ -1,6 +1,7 @@
 <script lang="ts">
 import axios from "axios";
 import Poster from "@/components/Poster.vue";
+import BinaryReavealText from "@/components/BinaryReavealText.vue";
 
 
 export default {
@@ -10,6 +11,7 @@ export default {
     };
   },
   components: {
+    BinaryReavealText,
     Poster
   },
   mounted() {
@@ -17,14 +19,11 @@ export default {
   },
   methods: {
     getImages() {
-      const apiUrl = 'http://localhost:5001/api/v1/images';
+      const apiUrl = 'http://localhost:5001/api/v1/dataframe';
 
       axios.get(apiUrl).then(response => {
         if (response.data.length > 0) {
-          this.images = response.data.slice(0, 50).map((image, rank) => ({
-            src: image,
-            alt: `Top ${rank + 1}`
-          }));
+          this.images = response.data.slice(0, 50)
         }
       }).catch(error => {
         console.error(error);
@@ -41,8 +40,9 @@ export default {
         Imdb top movies
         <span class="bg-clip-text text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">prediction</span>
       </h1>
+
       <p class="uppercase leading-normal text-base text-xl mb-8 text-center md:text-left w-1/2">
-        We use the top 100 films from Imdb to train our models. See the results of your favorite films.
+        <BinaryReavealText text="We use the top 100 films from Imdb to train our models. See the results of your favorite films." />
       </p>
     </div>
   </div>
@@ -50,9 +50,9 @@ export default {
   <video src="src/assets/mp4/trigger.mp4" preload="auto" autoplay loop class="my-2"></video>
 
   <div class="px-72">
-    <div class="grid gap-8 grid-cols-4">
+    <div class="grid gap-8 grid-cols-3">
       <div v-for="(image, index) in images" :key="index" class="w-full h-full flex flex-col justify-between">
-        <Poster :src="image.src" :alt="image.alt"/>
+        <Poster :src="image.url" :kpis="image.kpis"/>
       </div>
     </div>
   </div>
