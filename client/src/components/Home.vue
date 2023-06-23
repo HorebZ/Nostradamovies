@@ -1,3 +1,15 @@
+<script lang="ts">
+  import UploadFile from '@/components/UploadFile.vue';
+  import BinaryReavealText from "@/components/BinaryReavealText.vue";
+
+  export default {
+    components: {
+      BinaryReavealText,
+      UploadFile,
+    },
+  };
+</script>
+
 <template>
   <div class="flex-row mt-20 px-72">
 
@@ -8,16 +20,16 @@
       </h1>
 
       <p class="uppercase leading-normal text-base text-xl mb-8 text-center md:text-left w-1/2">
-        With I.A & statFrom uploading movies poster get informations in second
+        <BinaryReavealText text="With I.A & statFrom uploading movies poster get informations in second" />
       </p>
     </div>
   </div>
 
   <video src="src/assets/mp4/header-animation.mp4" preload="auto" autoplay="" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" class="my-2"></video>
 
-  <UploadFile class="w-1/3"/>
+  <div class="flex mt-20 px-72">
+    <UploadFile class="h-1/3 w-96"/>
+  </div>
+
 
 </template>
-
-<script setup lang="ts">
-</script>
