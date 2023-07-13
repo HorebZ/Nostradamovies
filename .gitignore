@@ -1,7 +1,13 @@
 # Dataset
 dataset/
+datasave/
+<<<<<<< HEAD
+=======
+
+# Static
 static/
 static/*
+>>>>>>> 93fe2e3fde74361bbeb7774e4797b3b24f6e9556
 
 # Ide
 .idea/
