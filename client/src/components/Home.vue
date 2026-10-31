@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <video src="src/assets/mp4/header-animation.mp4" preload="auto" autoplay="" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" class="my-2"></video>
+  <video src="@/assets/mp4/header-animation.mp4" preload="auto" autoplay loop playsinline webkit-playsinline="" x5-playsinline="" class="my-2"></video>
 
   <div class="flex mt-20 px-72">
     <UploadFile class="h-1/3 w-96"/>

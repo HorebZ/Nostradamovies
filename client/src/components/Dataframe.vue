@@ -47,7 +47,7 @@ export default {
     </div>
   </div>
 
-  <video src="src/assets/mp4/trigger.mp4" preload="auto" autoplay loop class="my-2"></video>
+  <video src="@/assets/mp4/trigger.mp4" preload="auto" autoplay loop class="my-2"></video>
 
   <div class="px-72">
     <div class="grid gap-8 grid-cols-3">
